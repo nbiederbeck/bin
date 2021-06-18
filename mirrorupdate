@@ -1,0 +1,9 @@
+#!/bin/bash
+
+reflector \
+    --protocol https \
+    --latest 10 \
+    --country Germany \
+    --sort rate \
+    --verbose \
+> ~/mirrorlist
