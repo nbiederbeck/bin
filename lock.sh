@@ -32,4 +32,7 @@ case "${XDG_SESSION_TYPE}" in
                 --wrong-color="${red}"
         fi
         ;;
+    *)
+        exit 1
+        ;;
 esac
