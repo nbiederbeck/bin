@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+function reset {
+    redshift -x
+}
+trap reset EXIT
+
+# if redshift was run before,
+# the temperature seems to get added
+reset
+
+# set a nice warm-ish color
+redshift -O "${1-2700}"
+
+# wait until terminated
+sleep 1d
